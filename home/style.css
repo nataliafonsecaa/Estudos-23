@@ -5,6 +5,7 @@ body {
     font-family: 'Lato', sans-serif;
   }
 
+   /* ---------------------inicio nav----------------------------------- */
 nav {
     display: flex;
     justify-content: space-around;
@@ -17,6 +18,13 @@ nav {
 .logo {
     font-weight: 800;
     font-size: 25px;
+    position: absolute;
+    top: 10;
+    /* left: 0; */
+    /* margin-left: 150px; */
+    margin-right: 20px;
+    float: left;
+
 }
 
 .nav-itens {
@@ -50,19 +58,31 @@ nav {
     padding: 5px 10px;
     cursor: pointer;
 }
- /* ---------------------conteudo----------------------------------- */
+ /* ---------------------fim nav----------------------------------- */
+
+ /* ---------------------carrossel----------------------------------- */
 
  .content{
-  height: 520px;
-  width: 935px;
-  border-radius: 20px;
+  height: 410px;
+  width: 100%;
+  border-radius: 50px;
   overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+
+
  }
+ .slider-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navegacao{
   position: absolute;
   bottom: 20px;
@@ -87,41 +107,19 @@ nav {
 input{
   display: none;
 }
-.slides {
-  display: flex;
-  width: 500%;
 
-  /* overflow: hidden; */
+#slide1:checked ~ .s1,
+#slide2:checked ~ .s2,
+#slide3:checked ~ .s3,
+#slide4:checked ~ .s4,
+#slide5:checked ~ .s5 {
+  display: block;
 }
-
-/* ... Seus estilos CSS anteriores ... */
 
 .slide {
-  width: 100%;
-  transition: 0.6s;
+  display: none;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-}
+ /* ---------------------fim carrossel----------------------------------- */
 
-#slide1:checked ~ .slides .s1 {
-  margin-left: 0;
-}
 
-#slide2:checked ~ .slides .s2 {
-  margin-left: -20%;
-}
-
-#slide3:checked ~ .slides .s3 {
-  margin-left: -40%;
-}
-
-#slide4:checked ~ .slides .s4 {
-  margin-left: -60%;
-}
-
-#slide5:checked ~ .slides .s5 {
-  margin-left: -80%;
-}
